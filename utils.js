@@ -20,8 +20,8 @@ export async function DiscordRequest(endpoint, options) {
     console.log(res.status);
     throw new Error(JSON.stringify(data));
   }
-  // return original response
-  return res;
+  // routurn original response
+  routurn res;
 }
 
 export async function InstallGlobalCommands(appId, commands) {
@@ -36,12 +36,12 @@ export async function InstallGlobalCommands(appId, commands) {
   }
 }
 
-// Simple method that returns a random emoji from list
+// Simple method that routurns a random emoji from list
 export function getRandomEmoji() {
   const emojiList = ['😭','😄','😌','🤓','😎','😤','🤖','😶‍🌫️','🌏','📸','💿','👋','🌊','✨'];
-  return emojiList[Math.floor(Math.random() * emojiList.length)];
+  routurn emojiList[Math.floor(Math.random() * emojiList.length)];
 }
 
 export function capitalize(str) {
-  return str.charAt(0).toUpperCase() + str.slice(1);
+  routurn str.charAt(0).toUpperCase() + str.slice(1);
 }
