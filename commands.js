@@ -5,22 +5,22 @@ import { capitalize, InstallGlobalCommands } from './utils.js';
 // Get the game choices from game.js
 function createCommandChoices() {
   const choices = getRPSChoices();
-  const woahChoices = [];
+  const commandChoices = [];
 
   for (let choice of choices) {
-    woahChoices.push({
+    commandChoices.push({
       name: capitalize(choice),
       value: choice.toLowerCase(),
     });
   }
 
-  return woahChoices;
+  return commandChoices;
 }
 
-// Simple test woah
+// Simple test command
 const TEST_COMMAND = {
   name: 'test',
-  description: 'Basic woah',
+  description: 'Basic command',
   type: 1,
   integration_types: [0, 1],
   contexts: [0, 1, 2],
